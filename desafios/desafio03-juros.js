@@ -1,6 +1,10 @@
 const TAXA_DIARIA = 0.025;
 const MILISSEGUNDOS_POR_DIA = 24 * 60 * 60 * 1000;
 
+/** Converte uma data DD/MM/AAAA em Date, ou retorna null se ela for inválida.
+ * @param {string} dataTexto Data informada pelo usuário.
+ * @returns {Date | null} Data válida em UTC ou null.
+ */
 function converterData(dataTexto) {
   const partes = dataTexto.split("/").map(Number);
   if (partes.length !== 3) return null;
@@ -15,6 +19,10 @@ function converterData(dataTexto) {
   return dataValida ? data : null;
 }
 
+/** Calcula os juros simples acumulados até hoje para uma conta vencida.
+ * @param {(mensagem: string) => Promise<string>} perguntar Função usada para ler dados do terminal.
+ * @returns {Promise<void>}
+ */
 export async function executarDesafio03(perguntar) {
   const valorTexto = (await perguntar("Valor da conta: ")).trim().replace(",", ".");
   const valor = Number(valorTexto);

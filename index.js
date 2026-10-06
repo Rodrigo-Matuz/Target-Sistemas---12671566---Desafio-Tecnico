@@ -7,6 +7,10 @@ import { executarDesafio03 } from "./desafios/desafio03-juros.js";
 const readline = createInterface({ input: stdin, output: stdout });
 const linhas = readline[Symbol.asyncIterator]();
 
+/** Lê uma linha do terminal após exibir a mensagem informada.
+ * @param {string} mensagem Texto exibido antes da leitura.
+ * @returns {Promise<string>} Linha digitada pelo usuário.
+ */
 async function perguntar(mensagem) {
   stdout.write(mensagem);
   const { value } = await linhas.next();

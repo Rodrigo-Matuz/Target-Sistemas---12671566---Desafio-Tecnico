@@ -1,5 +1,8 @@
 import vendasJson from "../json/vendas.json" with { type: "json" };
 
+/** Calcula e exibe a comissão total de cada vendedor com base nas vendas.
+ * @returns {void}
+ */
 export function executarDesafio01() {
   const comissoes = new Map();
 

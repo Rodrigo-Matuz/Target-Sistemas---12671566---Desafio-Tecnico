@@ -2,6 +2,10 @@ import estoqueJson from "../json/estoque.json" with { type: "json" };
 
 let proximoId = 1;
 
+/** Registra uma entrada ou saída e exibe o saldo atualizado do produto.
+ * @param {(mensagem: string) => Promise<string>} perguntar Função usada para ler dados do terminal.
+ * @returns {Promise<void>}
+ */
 export async function executarDesafio02(perguntar) {
   const codigoProduto = Number(await perguntar("Código do produto: "));
   const produto = estoqueJson.estoque.find((item) => item.codigoProduto === codigoProduto);
