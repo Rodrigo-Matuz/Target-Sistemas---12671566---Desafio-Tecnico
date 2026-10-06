@@ -36,5 +36,5 @@ O `index.js` exibe o menu e encaminha a execução para o módulo escolhido. Cad
 ## Exercícios
 
 1. **Comissão de vendas:** vendas abaixo de R$ 100 não geram comissão; valores de R$ 100 a R$ 499,99 geram 1%; a partir de R$ 500 geram 5%. O resultado é agrupado por vendedor.
-2. **Movimentação de estoque:** informa o código do produto, o tipo e a quantidade. O programa valida o produto e a quantidade, impede saída maior que o estoque disponível e mostra o identificador, a descrição e o saldo final. Os dados são mantidos em memória durante a execução.
+2. **Movimentação de estoque:** informa o código do produto, o tipo (`I` para entrada ou `O` para saída) e a quantidade. O programa valida o produto e a quantidade, impede saída maior que o estoque disponível e mostra o identificador, a descrição e o saldo final. Os dados são mantidos em memória durante a execução.
 3. **Cálculo de juros:** solicita valor e vencimento no formato `DD/MM/AAAA`. Aplica juros simples de 2,5% do valor original por dia de atraso. Vencimentos hoje ou no futuro não geram juros.

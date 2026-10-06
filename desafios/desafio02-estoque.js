@@ -15,14 +15,14 @@ export async function executarDesafio02(perguntar) {
     return;
   }
 
-  const tipo = (await perguntar("Tipo da movimentação (entrada/saída): "))
+  const tipo = (await perguntar("Tipo da movimentação (I = entrada / O = saída): "))
     .trim()
-    .toLowerCase();
-  const entrada = tipo === "entrada";
-  const saida = tipo === "saída" || tipo === "saida";
+    .toUpperCase();
+  const entrada = tipo === "I";
+  const saida = tipo === "O";
 
   if (!entrada && !saida) {
-    console.log("Tipo inválido. Use entrada ou saída.");
+    console.log("Tipo inválido. Use I para entrada ou O para saída.");
     return;
   }
 
